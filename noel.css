@@ -1,0 +1,78 @@
+#app {
+  overflow: hidden;
+  position: relative;
+  background-color: #6666ff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7)));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
+}
+
+div.flocon {
+  width: 1em;
+  height: 1em;
+  font-size: 64px;
+  position: absolute;
+  top: -1em;
+}
+
+div.flocon svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+  fill-opacity: .5;
+}
+
+div.flocon {
+  -webkit-animation-name: swing, tourne;
+          animation-name: swing, tourne;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 2300ms,2700ms;
+          animation-duration: 2300ms,2700ms;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1), ease-in-out;
+          animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1), ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition-timing-function: cubic-bezier(0.5, 0.1, 0.9, 0, 5);
+          transition-timing-function: cubic-bezier(0.5, 0.1, 0.9, 0, 5);
+}
+
+@-webkit-keyframes swing {
+  0% {
+    margin-left: -1em;
+  }
+  100% {
+    margin-left: 1em;
+  }
+}
+
+@keyframes swing {
+  0% {
+    margin-left: -1em;
+  }
+  100% {
+    margin-left: 1em;
+  }
+}
+
+@-webkit-keyframes tourne {
+  0% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  100% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+}
+
+@keyframes tourne {
+  0% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  100% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+}
+/*# sourceMappingURL=noel.css.map */
